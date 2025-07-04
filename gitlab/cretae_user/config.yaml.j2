@@ -1,0 +1,12 @@
+# 批量新增用户模板文件
+gitlab_url: {{ gitlab_url }}
+private_token: {{ gitlab_token }}
+
+# 初始密码 12345678
+users:
+  - email: {{ user_email }}
+    # 姓名英文全拼
+    username: {{ username }}
+    # 姓名中文
+    name: {{ user_name }}
+    skip_confirmation: true
