@@ -28,5 +28,11 @@ go.work.sum
 .env
 
 # Editor/IDE
-# .idea/
-# .vscode/
+.idea/
+.vscode/
+
+# 配置文件不上传
+**/config.yaml
+
+# 二进制文件不上传
+**/bin/*
