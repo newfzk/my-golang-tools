@@ -1,4 +1,4 @@
-name: my-golang-tools github actions for linux
+name: Linux Actions
 run-name: GitHub Actions by ${{ github.actor }}
 on:
   push:
