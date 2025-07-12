@@ -17,15 +17,14 @@ jobs:
           go-version: '1.23'
           cache-dependency-path: "**/*.sum"
       
-      - run: echo "workspace:${{ github.workspace }}"
-
       - name: Build Go application
         run: |
           pwd
           mkdir -p my-golang-tools-linux
           cd gitlab/cretae_user
           for file in $(find . -type f -name '*.go'); do
-            go build -v "$file" -o "${{ github.workspace }}/my-golang-tools-linux/$(basename "${file%.go}")"
+            echo "file:$file"
+            go build -o "${{ github.workspace }}/$(basename ${file} | cut -d'.' -f1)" -v "$file" 
           done
 
       - name: 制品保存
