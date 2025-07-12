@@ -16,8 +16,8 @@ jobs:
         with:
           go-version: '1.23'
           cache-dependency-path: "**/*.sum"
-    
-      - run: echo "workspace: ${{ github.workspace }}"
+      
+      - run: echo "workspace:${{ github.workspace }}"
 
       - name: Build Go application
         run: |
