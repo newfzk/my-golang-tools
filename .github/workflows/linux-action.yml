@@ -21,6 +21,8 @@ jobs:
 
       - name: Build Go application
         run: |
+          pwd
+          cd gitlab/cretae_user
           cd ${{ github.workspace }}/gitlab/create_user
           mkdir -p ${{ github.workspace }}/my-golang-tools-linux
           for file in $(find . -type f -name '*.go'); do
