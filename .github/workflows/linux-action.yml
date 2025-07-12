@@ -18,7 +18,7 @@ jobs:
           cache-dependency-path: "**/*.sum"
 
       - name: Build Go application
-        run: 
+        run: |
           cd ${{ github.workspace }}/gitlab/create_user
           mkdir -p ${{ github.workspace }}/my-golang-tools-linux
           for file in $(find . -type f -name '*.go'); do
