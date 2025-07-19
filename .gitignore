@@ -33,6 +33,8 @@ go.work.sum
 
 # 配置文件不上传
 **/config.yaml
+.rs10-commands.yaml
+local/
 
 # 二进制文件不上传
 **/bin/*
